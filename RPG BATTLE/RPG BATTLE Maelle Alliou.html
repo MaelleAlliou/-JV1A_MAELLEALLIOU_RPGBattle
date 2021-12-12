@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <body>
+        <meta charset="UTF-8">
+        <title>interface_jeu</title>
+        <style type="text/css"> 
+        	.bloc_action_perso_1{
+					display:inline-block;
+					align-items:flex-end;
+					flex-direction:row;
+					border:2px solid black;
+                    height: 150px;
+                    width: 1575px;
+                    margin-top: 300px;
+                    margin-left: -5px;
+					background-color: rgb(73, 26, 14);
+                    visibility: visible;
+}
+           .bloc_perso_1{
+		        	display:inline-block;
+			        align-items:flex-end;
+			        flex-direction:row;
+                    margin-left: 180px;
+                    margin-top: -600px;
+                    width: 1375px;
+                    height: 130px;
+		        	border:2px solid black;
+		        	background-color: rgb(85, 36, 24);
+}
+            .bloc_dialogue{
+                    display: inline-block;
+                    margin-left: -5px;
+                    margin-top: -5px;
+                    width: 1575px;
+                    height: 100px;
+                    border: 4px solid black;
+                    background-color: rgb(95, 26, 13);
+}
+            .les_heros{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    margin-left: 150px;
+                    margin-top: 80px;
+                    width: 200;
+}
+            .les_monstres{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    margin-left: 1200px;
+                    margin-top: -350px;
+            }
+            body{
+                    background: url("fire_cave.png") no-repeat;
+                    background-size: cover;
+}
+
+
+            #Info01{
+                display: flex;
+                position: absolute;
+                left: 60px;
+                top: 0px;
+                color: rgb(50, 51, 50);
+                padding: 10px;
+                width: 60px;
+                height: 20px;
+                margin: 10px;
+                border: 20px;
+                border-color: 2px rgb(255, 255, 255);
+                background-color: rgb(212, 44, 44);
+                visibility: hidden;
+            }
+            .aurelius{
+                position: relative;
+            }
+            .aurelius:hover #Info01{
+                visibility: visible;
+            }
+
+
+            #Info02{
+                display: flex;
+                position: absolute;
+                left: 60px;
+                top: 0px;
+                color: rgb(50, 51, 50);
+                padding: 10px;
+                width: 60px;
+                height: 20px;
+                margin: 10px;
+                border: 20px;
+                border-color: darkblue;
+                background-color: rgb(92, 59, 182);
+                visibility: hidden;
+            }
+            .dwarf{
+                position: relative;
+            }
+            .dwarf:hover #Info02{
+                visibility: visible;
+            }
+
+
+            #Info03{
+                display: flex;
+                position: absolute;
+                left: 60px;
+                top: 0px;
+                color: rgb(50, 51, 50);
+                padding: 10px;
+                width: 60px;
+                height: 20px;
+                margin: 10px;
+                border: 20px;
+                border-color: darkblue;
+                background-color: rgb(47, 143, 55);
+                visibility: hidden;
+            }
+            .elf{
+                position: relative;
+            }
+            .elf:hover #Info03{
+                visibility: visible;
+            }
+
+
+            #Info04{
+                display: flex;
+                position: absolute;
+                left: 60px;
+                top: 0px;
+                color: rgb(50, 51, 50);
+                padding: 10px;
+                width: 60px;
+                height: 20px;
+                margin: 10px;
+                border: 20px;
+                border-color: darkblue;
+                background-color: rgb(209, 199, 59);
+                visibility: hidden;
+            }
+            .esmeralda{
+                position: relative;
+            }
+            .esmeralda:hover #Info04{
+                visibility: visible;
+            }
+
+
+            #Info05{
+                display: flex;
+                position: absolute;
+                left: 60px;
+                top: 0px;
+                color: rgb(255, 255, 255);
+                padding: 10px;
+                width: 60px;
+                height: 20px;
+                margin: 10px;
+                border: 20px;
+                border: 2px;
+                border-color: rgb(255, 255, 255);
+                background-color: rgb(39, 19, 61);
+                visibility: hidden;
+            }
+            .golem_01{
+                position: relative;
+            }
+            .golem_01:hover #Info05{
+                visibility: visible;
+            }
+
+
+            #Info06{
+                display: flex;
+                position: absolute;
+                left: 60px;
+                top: 0px;
+                color: rgb(255, 255, 255);
+                padding: 10px;
+                width: 60px;
+                height: 20px;
+                margin: 10px;
+                border: 20px;
+                border-color: rgb(255, 255, 255);
+                background-color: rgb(36, 34, 34);
+                visibility: hidden;
+            }
+            .golem_02{
+                position: relative;
+            }
+            .golem_02:hover #Info06{
+                visibility: visible;
+            }
+
+
+            #Info07{
+                display: flex;
+                position: absolute;
+                left: 60px;
+                top: 0px;
+                color: rgb(255, 255, 255);
+                padding: 10px;
+                width: 60px;
+                height: 20px;
+                margin: 10px;
+                border: 20px;
+                border-color: rgb(255, 255, 255);
+                background-color: rgb(65, 19, 19);
+                visibility: hidden;
+            }
+            .golem_03{
+                position: relative;
+            }
+            .golem_03:hover #Info07{
+                visibility: visible;
+            }
+
+        </style>
+
+
+            </body>
+    </head>
+
+
+    <div class= "bloc_dialogue" id="Text">
+        <table>
+            <tr><td><h3>"Commentaire :"</h3></td></tr>
+            <tr><td><text= CommentaireHTML></text></td></tr>
+        </table>
+
+    </div>
+
+    
+    <div class="les_heros">
+        <div class="aurelius">
+            <img src="knight.gif" style=width:100px;height:130px;>
+            <span id="Info01">Héros 01</span>
+        </div>
+        <div class="dwarf">
+            <img src="blue_knight.png" style=width:100px;height:130px;>
+            <span id="Info02">Héros 02</span>
+        </div>
+        <div class="elf">
+            <img src="green_knight.png" style=width:100px;height:130px;>
+            <span id="Info03">Héros 03</span>
+        </div>
+        <div class="esmeralda">
+            <img src="yellow_knight.png" style=width:100px;height:130px;>
+            <span id="Info04">Héros 04</span>
+        </div>
+    </div>
+     
+
+    <div class="les_monstres">
+        <div class="golem_01">
+            <img src="preview_02.PNG">
+            <span id="Info05">100 PV</span>
+        </div>
+        <div class="golem_02">
+            <img src="preview.PNG">
+            <span id="Info06">100 PV</span>
+        </div>
+        <div class="golem_03">
+            <img src="preview_03.PNG">
+            <span id="Info07">100 PV</span>
+        </div>
+    </div>
+
+
+    
+        <div class="bloc_action_perso_1">
+            <table>
+                <tr><td><h3>ACTIONS</h3></td></tr>
+                <tr><td><button AttaqueHTML onclick="myFunction()">-Attaque-</button></td></tr>
+                <tr><td><button DefenseHTML onclick="myFunction()">-Défense-</button></td></tr>
+                <tr><td><button AttaqueSpe01 onclick="myFunction()">-Boule de Feu-</button></td></tr>
+            </table>
+        </div>
+
+
+
+    <div class= "bloc_perso_1">
+        <table style="width:100%">
+            <tr>
+              <th>- Chevalier de rubis -</th>
+              <th>- Chevalier de saphir -</th>
+              <th>- Chevalier d'émeuraude -</th>
+              <th>- Chevalier d'opale -</th>
+            </tr>
+            <tr>
+              <td>PV =<print= PV_PERSO_01></print></td>
+              <td>PV =<print= PV_PERSO_02></print></td>
+              <td>PV =<print= PV_PERSO_03></print></td>
+              <td>PV =<print= Esmeralda_PV></print></td>
+            </tr>
+            <tr>
+              <td>MANA =<print= MANA_PERSO_01></print></td>
+              <td>MANA =<print= MANA_PERSO_02></print></td>
+              <td>MANA =<print= MANA_PERSO_03></print></td>
+              <td>MANA =<print= MANA_PERSO_04></print></td>
+            </tr>
+    </div>
+
+
+<div class= "Text" id="Text"></div>
+<div class= "Actions" id="Actions"></div>
+<div class= "Attaque" id="Attaque"></div>
+<div class= "Defense" id="Defense"></div>
+<div class= "AttaqueSpe01" id="AttaqueSpe01"></div>
+<div class= "AttaqueSpe02" id="AttaqueSpe02"></div>
+<div class= "AttaqueSpe03" id="AttaqueSpe03"></div>
+<div class= "AttaqueSpe04" id="AttaqueSpe04"></div>
+
+<div class= "Aurelius_Img" id="Aurelius_Img"></div>
+<div class= "Aurelius_PV" id="Aurelius_PV"></div>
+<div class= "Aurelius_MANA" id="Aurelius_MANA"></div>
+
+<div class= "Dwarf_Img" id="Dwarf_Img"></div>
+<div class= "Dwarf_PV" id="Dwarf_PV"></div>
+<div class= "Dwarf_MANA" id="Dwarf_MANA"></div>
+
+<div class= "Elf_Img" id="Elf_Img"></div>
+<div class= "Elf_PV" id="Elf_PV"></div>
+<div class= "Elf_MANA"  id="Elf_MANA"></div>
+
+<div class= "Esmeralda_Img" id="Esmeralda_Img"></div>
+<div class= "Esmeralda_PV" id="Esmeralda_PV"></div>
+<div class= "Esmeralda_MANA" id="Esmeralda_MANA"></div>
+    </head>
+</html>
+
